@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results>
+    <suite name="E-Commerce Suite" duration-ms="3500" started-at="2025-03-24T22:00:00"
+           finished-at="2025-03-24T22:00:03">
+        <test name="Login Test" duration-ms="1000" started-at="2025-03-24T22:00:00" finished-at="2025-03-24T22:00:01">
+            <class name="com.ecommerce.tests.LoginTest">
+                <test-method name="validLogin" status="PASS" duration-ms="200" started-at="2025-03-24T22:00:00"
+                             finished-at="2025-03-24T22:00:00"/>
+                <test-method name="invalidLogin" status="FAIL" duration-ms="300" started-at="2025-03-24T22:00:00"
+                             finished-at="2025-03-24T22:00:00">
+                    <exception>
+                        <message>Expected login to fail but it succeeded.</message>
+                        <full-stacktrace>java.lang.AssertionError: Expected login to fail at ...</full-stacktrace>
+                    </exception>
+                </test-method>
+            </class>
+        </test>
+        <test name="Checkout Test" duration-ms="1200" started-at="2025-03-24T22:00:01"
+              finished-at="2025-03-24T22:00:02">
+            <class name="com.ecommerce.tests.CheckoutTest">
+                <test-method name="testEmptyCart" status="SKIP" duration-ms="0" started-at="2025-03-24T22:00:01"
+                             finished-at="2025-03-24T22:00:01">
+                    <skipped>
+                        <message>Cart is empty. Test skipped.</message>
+                    </skipped>
+                </test-method>
+                <test-method name="testSuccessfulCheckout" status="PASS" duration-ms="1200"
+                             started-at="2025-03-24T22:00:01" finished-at="2025-03-24T22:00:02"/>
+            </class>
+        </test>
+        <test name="Payment Test" duration-ms="500" started-at="2025-03-24T22:00:02" finished-at="2025-03-24T22:00:02">
+            <class name="com.ecommerce.tests.PaymentTest">
+                <test-method name="processPayment" status="BLOCKED" duration-ms="0" started-at="2025-03-24T22:00:02"
+                             finished-at="2025-03-24T22:00:02">
+                    <blocked>
+                        <message>Payment gateway unavailable. Test could not proceed.</message>
+                    </blocked>
+                </test-method>
+            </class>
+        </test>
+        <test name="Discount Test" duration-ms="800" started-at="2025-03-24T22:00:02" finished-at="2025-03-24T22:00:03">
+            <class name="com.ecommerce.tests.DiscountTest">
+                <test-method name="applyDiscount" status="WARNING" duration-ms="800" started-at="2025-03-24T22:00:02"
+                             finished-at="2025-03-24T22:00:03">
+                    <warning>
+                        <message>Discount applied, but total price miscalculated.</message>
+                    </warning>
+                </test-method>
+            </class>
+        </test>
+    </suite>
+</testng-results>

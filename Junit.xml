@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="E-Commerce Suite" tests="6" failures="1" skipped="1" time="3.5">
+    <testcase classname="com.ecommerce.tests.LoginTest" name="validLogin" time="0.2"/>
+    <testcase classname="com.ecommerce.tests.LoginTest" name="invalidLogin" time="0.3">
+        <failure message="Expected login to fail but it succeeded.">
+            java.lang.AssertionError: Expected login to fail at ...
+        </failure>
+    </testcase>
+    <testcase classname="com.ecommerce.tests.CheckoutTest" name="testEmptyCart" time="0.0">
+        <skipped>Cart is empty. Test skipped.</skipped>
+    </testcase>
+    <testcase classname="com.ecommerce.tests.CheckoutTest" name="testSuccessfulCheckout" time="1.2"/>
+    <testcase classname="com.ecommerce.tests.PaymentTest" name="processPayment" time="0.0">
+        <system-out><![CDATA[Payment gateway unavailable. Test could not proceed.]]></system-out>
+    </testcase>
+    <testcase classname="com.ecommerce.tests.DiscountTest" name="applyDiscount" time="0.8">
+        <system-out><![CDATA[Discount applied, but total price miscalculated.]]></system-out>
+    </testcase>
+</testsuite>

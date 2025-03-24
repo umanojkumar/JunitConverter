@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="E-Commerce Suite" skipped="1" tests="6" time="2.5">
+    <testcase classname="com.ecommerce.tests.LoginTest" name="validLogin" time="0.2"/>
+    <testcase classname="com.ecommerce.tests.LoginTest" name="invalidLogin" time="0.3">
+        <failure
+                message="&#10;                        Expected login to fail but it succeeded.&#10;                        java.lang.AssertionError: Expected login to fail at ...&#10;                    ">
+            Expected login to fail but it succeeded.
+            java.lang.AssertionError: Expected login to fail at ...
+        </failure>
+    </testcase>
+    <testcase classname="com.ecommerce.tests.CheckoutTest" name="testEmptyCart" time="0.0">
+        <skipped message="&#10;                        Cart is empty. Test skipped.&#10;                    ">
+            Cart is empty. Test skipped.
+        </skipped>
+    </testcase>
+    <testcase classname="com.ecommerce.tests.CheckoutTest" name="testSuccessfulCheckout" time="1.2"/>
+    <testcase classname="com.ecommerce.tests.PaymentTest" name="processPayment" time="0.0">
+        <unknown>Unhandled status: BLOCKED</unknown>
+    </testcase>
+    <testcase classname="com.ecommerce.tests.DiscountTest" name="applyDiscount" time="0.8">
+        <unknown>Unhandled status: WARNING</unknown>
+    </testcase>
+</testsuite>
